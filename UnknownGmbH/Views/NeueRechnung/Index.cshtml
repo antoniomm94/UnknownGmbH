@@ -1,0 +1,139 @@
+﻿@model IEnumerable<UnknownGmbH.Models.NeueRechnung>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+@using (Html.BeginForm())
+{
+    <p>
+        Find by name: @Html.TextBox("SearchString")
+        <input type="submit" value="Search" />
+    </p>
+}
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.ActionLink("Klient", "Index", new { sortOrder = ViewBag.NameSortParm })
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FirmenName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Adresse)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PLZ)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Stadt)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Land)
+        </th>
+        <th>
+            @Html.ActionLink("Datum", "Index", new { sortOrder = ViewBag.DateSortParm })
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Währung)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Steuer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ZahlungsMethode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Artikel)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Menge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ZahlenBis)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NettoPreis)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BruttoPreis)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Gesamt)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Klient)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FirmenName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Adresse)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PLZ)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Stadt)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Land)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Datum)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Währung)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Steuer)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ZahlungsMethode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Artikel)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Menge)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ZahlenBis)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NettoPreis)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BruttoPreis)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Gesamt)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+            </td>
+        </tr>
+    }
+
+</table>

@@ -1,0 +1,154 @@
+﻿@model UnknownGmbH.Models.NeueRechnung
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>NeueRechnung</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Klient)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Klient)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FirmenName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FirmenName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Adresse)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Adresse)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PLZ)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PLZ)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Stadt)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Stadt)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Land)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Land)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Datum)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Datum)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Währung)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Währung)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Steuer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Steuer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ZahlungsMethode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ZahlungsMethode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Artikel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Artikel)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Menge)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Menge)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ZahlenBis)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ZahlenBis)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NettoPreis)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NettoPreis)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BruttoPreis)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BruttoPreis)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Gesamt)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Gesamt)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
