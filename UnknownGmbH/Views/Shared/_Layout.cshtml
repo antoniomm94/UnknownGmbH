@@ -4,6 +4,9 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - UnknownGmbH</title>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/css/app.css" rel="stylesheet" asp-append-version="true" />
+    <script src="~/js/app.js" asp-append-version="true"></script>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
@@ -30,7 +33,7 @@
     <div class="container body-content">
         @RenderBody()
         <hr />
-        <footer>
+        <footer class="yo">
             <p>&copy; @DateTime.Now.Year - UnknownGmbH</p>
         </footer>
     </div>
